@@ -7,7 +7,7 @@ window.translations = {
         aboutLink: 'เกี่ยวกับเรา',
 
         // Hero Section
-        heroTitle: 'MathSci Mastermind',
+        heroTitle: 'MathSci Explorer',
         heroSubtitle: 'เรียนรู้คณิตศาสตร์และวิทยาศาสตร์ด้วยพลังของ AI',
         startLearningBtn: 'เริ่มต้นเรียนรู้',
         learnMoreBtn: 'เรียนรู้เพิ่มเติม',
@@ -37,7 +37,7 @@ window.translations = {
 
         // About Section
         aboutTitle: 'คณะผู้จัดทำ',
-        aboutDesc: 'สร้างโดยทีมพัฒนา MathSci Mastermind',
+        aboutDesc: 'สร้างโดยทีมพัฒนา MathSci Explorer',
         schoolName: 'โรงเรียนท่าตะโกพิทยาคม',
         groupName: 'กลุ่มสาระการเรียนรู้คณิตศาสตร์'
     },
@@ -49,7 +49,7 @@ window.translations = {
         aboutLink: 'About',
 
         // Hero Section
-        heroTitle: 'MathSci Mastermind',
+        heroTitle: 'MathSci Explorer',
         heroSubtitle: 'Learn Mathematics and Science with AI Power',
         startLearningBtn: 'Start Learning',
         learnMoreBtn: 'Learn More',
@@ -79,7 +79,7 @@ window.translations = {
 
         // About Section
         aboutTitle: 'Development Team',
-        aboutDesc: 'Created by MathSci Mastermind Development Team',
+        aboutDesc: 'Created by MathSci Explorer Development Team',
         schoolName: 'Thatako Phitayakom School',
         groupName: 'Mathematics Learning Group'
     }

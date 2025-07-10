@@ -55,7 +55,7 @@ export class CommonLoader {
                             <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                                 <i class="fas fa-graduation-cap text-white text-xl"></i>
                             </div>
-                            <span class="text-xl font-bold">MathSci Mastermind</span>
+                            <span class="text-xl font-bold">MathSci Explorer</span>
                         </div>
                         <p class="text-gray-400 mb-4">
                             ${isEnglish ? 'AI-powered Mathematics and Science Learning Platform' : 'แพลตฟอร์มการเรียนรู้คณิตศาสตร์และวิทยาศาสตร์ด้วย AI'}
@@ -116,7 +116,7 @@ export class CommonLoader {
                 
                 <div class="border-t border-gray-700 mt-8 pt-8 text-center">
                     <p class="text-gray-400">
-                        © ${year} MathSci Mastermind. ${isEnglish ? 'All rights reserved.' : 'สงวนลิขสิทธิ์'} | 
+                        © ${year} MathSci Explorer. ${isEnglish ? 'All rights reserved.' : 'สงวนลิขสิทธิ์'} | 
                         ${isEnglish ? 'Mathematics Learning Group, Thatako Phitayakom School' : 'กลุ่มสาระการเรียนรู้คณิตศาสตร์ โรงเรียนท่าตะโกพิทยาคม'}
                     </p>
                 </div>
