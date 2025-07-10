@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathSci Mastermind - คณิตศาสตร์</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ตราสัญลักษณ์โรงเรียนที่มุมซ้ายบน -->
+    <div id="schoolLogo">
+        <img src="images/school-logo.png" alt="ตราสัญลักษณ์โรงเรียน" width="150" height="150">
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="homeLink">Home</a></li>
+                <li><a href="math.html" id="mathLink">คณิตศาสตร์</a></li>
+                <li><a href="science.html" id="scienceLink">วิทยาศาสตร์</a></li>
+                <li><a href="#about" id="aboutLink">เกี่ยวกับเรา</a></li>
+            </ul>
+        </nav>
+        <h1 id="title">MathSci Mastermind</h1>
+        <p id="intro">เริ่มวิเคราะห์ปัญหาทางคณิตศาสตร์</p>
+        <button id="languageButton" onclick="switchLanguage()">Switch to English</button>
+    </header>
+
+    <!-- เนื้อหาคณิตศาสตร์ -->
+    <section id="mathContent">
+        <h2 id="mathHeader">ปัญหาทางคณิตศาสตร์</h2>
+        <p id="mathDescription">ในหน้านี้เราจะมีปัญหาทางคณิตศาสตร์ที่คุณต้องการวิเคราะห์และแก้ไขปัญหาด้วย AI.</p>
+
+        <!-- เพิ่มรูปภาพจาก Google Drive -->
+        <img src="https://drive.google.com/uc?export=view&id=1A0B1ond8CqNQQkLcnu6dGCUo-Juahgnz" alt="ปัญหาคณิตศาสตร์" width="500" height="auto">
+    </section>
+
+    <footer>
+        <p id="footerText">MathSci Mastermind Development Team</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
