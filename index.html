@@ -1,61 +1,422 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MathSci Mastermind</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- ตราสัญลักษณ์โรงเรียนที่มุมซ้ายบน -->
-    <div id="schoolLogo">
-        <img src="images/school-logo.png" alt="ตราสัญลักษณ์โรงเรียน" width="150" height="150">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/loader.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen overflow-x-hidden"
+  >
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 glass-effect shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
+            >
+              <i class="fas fa-graduation-cap text-white text-xl"></i>
+            </div>
+            <span class="text-xl font-bold text-white" id="logoText"
+              >MathSci Mastermind</span
+            >
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-white hover:text-blue-600 transition-colors duration-200"
+              id="homeLink"
+            >
+              <i class="fas fa-home mr-2"></i><span>หน้าแรก</span>
+            </a>
+            <a
+              href="#math"
+              class="text-white hover:text-blue-600 transition-colors duration-200"
+              id="mathLink"
+            >
+              <i class="fas fa-calculator mr-2"></i><span>คณิตศาสตร์</span>
+            </a>
+            <a
+              href="#science"
+              class="text-white hover:text-blue-600 transition-colors duration-200"
+              id="scienceLink"
+            >
+              <i class="fas fa-atom mr-2"></i><span>วิทยาศาสตร์</span>
+            </a>
+            <a
+              href="#about"
+              class="text-white hover:text-blue-600 transition-colors duration-200"
+              id="aboutLink"
+            >
+              <i class="fas fa-users mr-2"></i><span>เกี่ยวกับเรา</span>
+            </a>
+          </div>
+
+          <!-- Language Toggle & Mobile Menu -->
+          <div class="flex items-center space-x-4">
+            <button
+              id="languageButton"
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+            >
+              <i class="fas fa-language mr-2"></i>EN
+            </button>
+            <button
+              id="mobileMenuButton"
+              class="md:hidden text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div
+      id="mobileOverlay"
+      class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden overlay opacity-0"
+    ></div>
+    <div
+      id="mobileSidebar"
+      class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 transform translate-x-full sidebar-transition"
+    >
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-2xl font-bold text-gray-800">Menu</h2>
+          <button
+            id="closeSidebar"
+            class="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+          >
+            <i class="fas fa-times text-xl"></i>
+          </button>
+        </div>
+        <nav class="space-y-6">
+          <a
+            href="#home"
+            class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors duration-200 text-lg mobile-nav-link"
+          >
+            <i class="fas fa-home w-6"></i><span>หน้าแรก</span>
+          </a>
+          <a
+            href="#math"
+            class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors duration-200 text-lg mobile-nav-link"
+          >
+            <i class="fas fa-calculator w-6"></i><span>คณิตศาสตร์</span>
+          </a>
+          <a
+            href="#science"
+            class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors duration-200 text-lg mobile-nav-link"
+          >
+            <i class="fas fa-atom w-6"></i><span>วิทยาศาสตร์</span>
+          </a>
+          <a
+            href="#about"
+            class="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors duration-200 text-lg mobile-nav-link"
+          >
+            <i class="fas fa-users w-6"></i><span>เกี่ยวกับเรา</span>
+          </a>
+        </nav>
+      </div>
     </div>
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" id="homeLink">Home</a></li> <!-- เพิ่มลิงก์ไปหน้าแรก -->
-                <li><a href="math.html" id="mathLink">คณิตศาสตร์</a></li> <!-- ลิงก์ไปหน้าคณิตศาสตร์ -->
-                <li><a href="science.html" id="scienceLink">วิทยาศาสตร์</a></li> <!-- ลิงก์ไปหน้าวิทยาศาสตร์ -->
-                <li><a href="#about" id="aboutLink">เกี่ยวกับเรา</a></li>
-            </ul>
-        </nav>
-        <h1 id="title">MathSci Mastermind</h1>
-        <p id="intro">เรียนรู้คณิตศาสตร์และวิทยาศาสตร์ด้วย AI</p>
-        <button id="languageButton" onclick="switchLanguage()">Switch to English</button>
-    </header>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center gradient-bg"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <div class="relative z-10 text-center text-white px-4">
+        <div class="bounce-in">
+          <h1
+            class="text-5xl md:text-7xl font-bold mb-6 text-glow"
+            id="heroTitle"
+          >
+            MathSci Mastermind
+          </h1>
+        </div>
+        <div class="slide-in-left delay-1">
+          <p
+            class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"
+            id="heroSubtitle"
+          >
+            เรียนรู้คณิตศาสตร์และวิทยาศาสตร์ด้วยพลังของ AI
+          </p>
+        </div>
+        <div class="slide-in-right delay-2">
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <button
+              class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              id="startLearningBtn"
+            >
+              <i class="fas fa-rocket mr-2"></i>
+              <span>เริ่มต้นเรียนรู้</span>
+            </button>
+            <button
+              class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition-all duration-300 transform hover:scale-105"
+              id="learnMoreBtn"
+            >
+              <i class="fas fa-info-circle mr-2"></i>
+              <span>เรียนรู้เพิ่มเติม</span>
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <!-- หน้าแรก -->
-    <section id="home">
-        <h2 id="homeText">ยินดีต้อนรับสู่ MathSci Mastermind!</h2>
-        <p id="homeIntro">เรียนรู้คณิตศาสตร์และวิทยาศาสตร์ผ่าน AI</p>
+      <!-- Floating Icons -->
+      <div
+        class="absolute top-20 left-10 text-white/20 text-6xl float-animation"
+      >
+        <i class="fas fa-calculator"></i>
+      </div>
+      <div
+        class="absolute bottom-20 right-10 text-white/20 text-6xl float-animation delay-2"
+      >
+        <i class="fas fa-atom"></i>
+      </div>
+      <div
+        class="absolute top-40 right-20 text-white/20 text-4xl float-animation delay-1"
+      >
+        <i class="fas fa-flask"></i>
+      </div>
+      <div
+        class="absolute bottom-40 left-20 text-white/20 text-4xl float-animation delay-3"
+      >
+        <i class="fas fa-microscope"></i>
+      </div>
     </section>
 
-    <!-- คณิตศาสตร์ -->
-    <section id="math">
-        <h2 id="mathHeader">คณิตศาสตร์</h2>
-        <button id="mathButton" onclick="location.href='math.html'">เริ่มวิเคราะห์ปัญหาทางคณิตศาสตร์</button>
+    <!-- Math Section -->
+    <section id="math" class="py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 slide-in-left"
+            id="mathTitle"
+          >
+            <i class="fas fa-calculator text-blue-500 mr-4"></i>คณิตศาสตร์
+          </h2>
+          <p
+            class="text-xl text-gray-600 slide-in-right delay-1"
+            id="mathSubtitle"
+          >
+            วิเคราะห์และแก้ปัญหาทางคณิตศาสตร์ด้วย AI
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-white rounded-2xl shadow-xl p-8 card-hover bounce-in delay-1"
+          >
+            <div class="text-center">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 wave-animation"
+              >
+                <i class="fas fa-brain text-white text-3xl"></i>
+              </div>
+              <h3
+                class="text-2xl font-bold text-gray-800 mb-4"
+                id="mathFeature1"
+              >
+                AI สำหรับสักอย่าง
+              </h3>
+              <p class="text-gray-600 mb-6" id="mathDesc1">
+                ระบบ AI ช่วยสักอย่างไม่รู้เหมือนกัน
+              </p>
+              <button
+                class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                id="mathButton1"
+              >
+                <i class="fas fa-play mr-2"></i>
+                <span>เริ่มต้น</span>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-xl p-8 card-hover bounce-in delay-2"
+          >
+            <div class="text-center">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 wave-animation delay-1"
+              >
+                <i class="fas fa-chart-line text-white text-3xl"></i>
+              </div>
+              <h3
+                class="text-2xl font-bold text-gray-800 mb-4"
+                id="mathFeature2"
+              >
+                บทเรียนคณิตศาสตร์
+              </h3>
+              <p class="text-gray-600 mb-6" id="mathDesc2">
+                เลือกบทเรียนคณิตศาสตร์ที่คุณสนใจ
+              </p>
+              <button
+                class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-purple-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                id="mathButton2"
+              >
+                <i class="fas fa-chart-bar mr-2"></i>
+                <span>เริ่มเรียน</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- วิทยาศาสตร์ -->
-    <section id="science">
-        <h2 id="scienceHeader">วิทยาศาสตร์</h2>
-        <button id="scienceButton" onclick="location.href='science.html'">เริ่มวิเคราะห์ปัญหาทางวิทยาศาสตร์</button>
+    <!-- Science Section -->
+    <section id="science" class="py-20 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 slide-in-right"
+            id="scienceTitle"
+          >
+            <i class="fas fa-atom text-green-500 mr-4"></i>วิทยาศาสตร์
+          </h2>
+          <p
+            class="text-xl text-gray-600 slide-in-left delay-1"
+            id="scienceSubtitle"
+          >
+            ค้นพบความลึกลับของวิทยาศาสตร์ด้วย AI
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-2xl shadow-xl p-6 card-hover bounce-in delay-1"
+          >
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 wave-animation"
+              >
+                <i class="fas fa-flask text-white text-2xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3"
+                id="scienceFeature1"
+              >
+                เคมี
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm" id="scienceDesc1">
+                วิเคราะห์สมการเคมีและปฏิกิริยา
+              </p>
+              <button
+                class="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 text-sm"
+                id="scienceButton1"
+              >
+                <span>เริ่มเรียน</span>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-xl p-6 card-hover bounce-in delay-2"
+          >
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 wave-animation delay-1"
+              >
+                <i class="fas fa-microscope text-white text-2xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3"
+                id="scienceFeature2"
+              >
+                ฟิสิกส์
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm" id="scienceDesc2">
+                เรียนรู้กฎฟิสิกส์และการประยุกต์
+              </p>
+              <button
+                class="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-lg hover:from-red-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 text-sm"
+                id="scienceButton2"
+              >
+                <span>เริ่มเรียน</span>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-xl p-6 card-hover bounce-in delay-3"
+          >
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4 wave-animation delay-2"
+              >
+                <i class="fas fa-leaf text-white text-2xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3"
+                id="scienceFeature3"
+              >
+                ชีววิทยา
+              </h3>
+              <p class="text-gray-600 mb-4 text-sm" id="scienceDesc3">
+                ศึกษาสิ่งมีชีวิตและระบบนิเวศ
+              </p>
+              <button
+                class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-4 py-2 rounded-lg hover:from-yellow-600 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105 text-sm"
+                id="scienceButton3"
+              >
+                <span>เริ่มเรียน</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- คณะผู้จัดทำ -->
-    <section id="about">
-        <h2 id="aboutHeader">คณะผู้จัดทำ</h2>
-        <p id="aboutText">สร้างโดยทีมพัฒนา MathSci Mastermind</p>
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bounce-in delay-2">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="slide-in-left">
+          <h2
+            class="text-4xl md:text-5xl font-bold text-gray-800 mb-8"
+            id="aboutTitle"
+          >
+            <i class="fas fa-users text-purple-500 mr-4"></i>คณะผู้จัดทำ
+          </h2>
+        </div>
+        <div class="slide-in-right delay-1">
+          <p class="text-xl text-gray-600 mb-8" id="aboutDesc">
+            สร้างโดยทีมพัฒนา MathSci Mastermind
+          </p>
+        </div>
+        <div class="bounce-in delay-2">
+          <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+            <div
+              class="w-24 h-24 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 wave-animation"
+            >
+              <i class="fas fa-graduation-cap text-white text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4" id="schoolName">
+              โรงเรียนท่าตะโกพิทยาคม
+            </h3>
+            <p class="text-gray-600" id="groupName">
+              กลุ่มสาระการเรียนรู้คณิตศาสตร์
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p id="footerText">MathSci Mastermind Development Team</p>
-    </footer>
+    <footer id="footer" class="bg-gray-800 text-white py-8"></footer>
 
-    <script src="script.js"></script>
-</body>
+    <script src="./scripts/loader.js" type="module"></script>
+    <script src="./scripts/home.js" type="module"></script>
+  </body>
 </html>

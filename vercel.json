@@ -1,6 +1,8 @@
 {
   "routes": [
     { "handle": "filesystem" },
+    /** note: for 403 (forbidden) might have to hard-code */
+    { "src": "^/TODO$", "status": 403, "dest": "/403.html" },
     { "src": "/.*", "status": 404, "dest": "/404.html" }
   ]
 }

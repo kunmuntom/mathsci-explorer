@@ -1,0 +1,3 @@
+/** common css loader, edit this if want to edit all page css, and all page should call this css loader! */
+@import url("../styles/root.css");
+* { font-family: Prompt, Arial, sans-serif; }
