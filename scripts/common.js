@@ -49,77 +49,61 @@ export class CommonLoader {
 
         return `
             <div class="max-w-6xl mx-auto px-4">
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="md:col-span-2">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-graduation-cap text-white text-xl"></i>
-                            </div>
-                            <span class="text-xl font-bold">MathSci Explorer</span>
-                        </div>
-                        <p class="text-gray-400 mb-4">
-                            ${isEnglish ? 'AI-powered Mathematics and Science Learning Platform' : 'แพลตฟอร์มการเรียนรู้คณิตศาสตร์และวิทยาศาสตร์ด้วย AI'}
-                        </p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
-                                <i class="fab fa-facebook-f text-xl"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
-                                <i class="fab fa-twitter text-xl"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
-                                <i class="fab fa-instagram text-xl"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
-                                <i class="fab fa-youtube text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">
-                            ${isEnglish ? 'Categories' : 'หมวดหมู่'}
-                        </h3>
-                        <ul class="space-y-2">
-                            <li><a href="#math" class="text-gray-400 hover:text-white transition-colors duration-200">
-                                ${isEnglish ? 'Mathematics' : 'คณิตศาสตร์'}
-                            </a></li>
-                            <li><a href="#science" class="text-gray-400 hover:text-white transition-colors duration-200">
-                                ${isEnglish ? 'Science' : 'วิทยาศาสตร์'}
-                            </a></li>
-                            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-200">
-                                ${isEnglish ? 'About Us' : 'เกี่ยวกับเรา'}
-                            </a></li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">
-                            ${isEnglish ? 'Contact' : 'ติดต่อเรา'}
-                        </h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-school text-blue-400"></i>
-                                <span class="text-gray-400 text-sm">
-                                    ${isEnglish ? 'Thatako Phitayakom School' : 'โรงเรียนท่าตะโกพิทยาคม'}
-                                </span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-map-marker-alt text-blue-400"></i>
-                                <span class="text-gray-400 text-sm">
-                                    ${isEnglish ? 'Nakhon Sawan, Thailand' : 'นครสวรรค์, ประเทศไทย'}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                <div class="flex items-center space-x-3 mb-4">
+                    <img src="./images/school.png" alt="School Logo" class="w-10 h-10 rounded-lg object-cover" />
+                    <span class="text-xl font-bold">MathSci Explorer</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    ${isEnglish ? 'AI-powered Mathematics and Science Learning Platform' : 'แพลตฟอร์มการเรียนรู้คณิตศาสตร์และวิทยาศาสตร์ด้วย AI'}
+                </p>
                 </div>
                 
-                <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                    <p class="text-gray-400">
-                        © ${year} MathSci Explorer. ${isEnglish ? 'All rights reserved.' : 'สงวนลิขสิทธิ์'} | 
-                        ${isEnglish ? 'Mathematics Learning Group, Thatako Phitayakom School' : 'กลุ่มสาระการเรียนรู้คณิตศาสตร์ โรงเรียนท่าตะโกพิทยาคม'}
-                    </p>
+                <div>
+                <h3 class="text-lg font-semibold mb-4">
+                    ${isEnglish ? 'Categories' : 'หมวดหมู่'}
+                </h3>
+                <ul class="space-y-2">
+                    <li><a href="#math" class="text-gray-400 hover:text-white transition-colors duration-200">
+                    ${isEnglish ? 'Mathematics' : 'คณิตศาสตร์'}
+                    </a></li>
+                    <li><a href="#science" class="text-gray-400 hover:text-white transition-colors duration-200">
+                    ${isEnglish ? 'Science' : 'วิทยาศาสตร์'}
+                    </a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-200">
+                    ${isEnglish ? 'About Us' : 'เกี่ยวกับเรา'}
+                    </a></li>
+                </ul>
                 </div>
+                
+                <div>
+                <h3 class="text-lg font-semibold mb-4">
+                    ${isEnglish ? 'Contact' : 'ติดต่อเรา'}
+                </h3>
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                    <i class="fas fa-school text-blue-400"></i>
+                    <span class="text-gray-400 text-sm">
+                        ${isEnglish ? 'Thatako Phitayakom School' : 'โรงเรียนท่าตะโกพิทยาคม'}
+                    </span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                    <i class="fas fa-map-marker-alt text-blue-400"></i>
+                    <span class="text-gray-400 text-sm">
+                        ${isEnglish ? 'Nakhon Sawan, Thailand' : 'นครสวรรค์, ประเทศไทย'}
+                    </span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                © ${year} MathSci Explorer. ${isEnglish ? 'All rights reserved.' : 'สงวนลิขสิทธิ์'} | 
+                ${isEnglish ? 'Mathematics Learning Group, Thatako Phitayakom School' : 'กลุ่มสาระการเรียนรู้คณิตศาสตร์ โรงเรียนท่าตะโกพิทยาคม'}
+                </p>
+            </div>
             </div>
         `
     }
