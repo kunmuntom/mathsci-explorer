@@ -138,8 +138,7 @@
             class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform">
             <i class="fas fa-language mr-2"></i>EN
           </button>
-          <button id="mobileMenuButton"
-            class="md:hidden text-white hover:text-blue-600 transition-colors duration-200">
+          <button id="mobileMenuButton" class="md:hidden text-white hover:text-blue-600 transition-colors duration-200">
             <i class="fas fa-bars text-xl"></i>
           </button>
         </div>
@@ -362,19 +361,21 @@
 
   <!-- About Section -->
   <section id="about" class="py-20 px-4 bounce-in delay-2">
-    <div class="max-w-4xl mx-auto text-center">
+    <div class="max-w-7xl mx-auto text-center">
       <div class="slide-in-left">
         <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8" id="aboutTitle">
           <i class="fas fa-users text-purple-500 mr-4"></i>คณะผู้จัดทำ
         </h2>
       </div>
       <div class="slide-in-right delay-1">
-        <p class="text-xl text-gray-600 mb-8" id="aboutDesc">
+        <p class="text-xl text-gray-600 mb-12" id="aboutDesc">
           สร้างโดยทีมพัฒนา MathSci Explorer
         </p>
       </div>
-      <div class="bounce-in delay-2">
-        <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+
+      <!-- School Info -->
+      <div class="bounce-in delay-2 mb-16">
+        <div class="bg-white rounded-2xl shadow-xl p-8 card-hover max-w-2xl mx-auto">
           <div
             class="w-24 h-24 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 wave-animation">
             <i class="fas fa-graduation-cap text-white text-4xl"></i>
@@ -385,6 +386,120 @@
           <p class="text-gray-600" id="groupName">
             กลุ่มสาระการเรียนรู้คณิตศาสตร์
           </p>
+        </div>
+      </div>
+
+      <!-- Team Members -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Teachers -->
+        <div class="team-card delay-1">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="relative">
+              <img
+                src="./images/photo/กฤตคณิน วนิชไพบูลย์.JPG"
+                alt="Mr. Kritsanin" class="team-image w-full h-80 bg-gray-200">
+              <div
+                class="role-badge-teacher role-badge absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-medium">
+                <i class="fas fa-chalkboard-teacher mr-1"></i><span id="teacher1">อาจารย์</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-800 mb-2" id="teacher-name1">นายกฤตคณิน วนิชไพบูลย์</h4>
+              <p class="text-gray-600 mb-1" id="teacher-des1">อาจารย์ประจำกลุ่มสาระคณิตศาสตร์</p>
+              <p class="text-gray-500 text-sm" id="teacher-sub1">โรงเรียนท่าตะโกพิทยาคม</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card delay-2">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="relative">
+              <img
+                src="./images/photo/ชวันธร ภาคีธง.JPG"
+                alt="Mr. Chawanthon" class="team-image w-full h-80 bg-gray-200">
+              <div
+                class="role-badge-teacher role-badge absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-medium">
+                <i class="fas fa-chalkboard-teacher mr-1"></i><span id="teacher2">อาจารย์</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-800 mb-2" id="teacher-name2">นายชวันธร ภาคีธง</h4>
+              <p class="text-gray-600 mb-1" id="teacher-des2">อาจารย์ประจำกลุ่มสาระคณิตศาสตร์</p>
+              <p class="text-gray-500 text-sm" id="teacher-sub2">โรงเรียนท่าตะโกพิทยาคม</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Students -->
+        <div class="team-card delay-3">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="relative">
+              <img
+                src="./images/photo/พัทธนันท์ แพงวงศ์.jpg"
+                alt="นางสาวพัทธนันท์ แพงวงศ์" class="team-image w-full h-80 bg-gray-200">
+              <div class="role-badge absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-medium">
+                <i class="fas fa-user-graduate mr-1"></i><span id="student1">นักเรียน</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-800 mb-2" id="student-name1">นางสาวพัทธนันท์ แพงวงศ์</h4>
+              <p class="text-gray-600 mb-1" id="student-des1">นักเรียนชั้นมัธยมศึกษาปีที่ 6</p>
+              <p class="text-gray-500 text-sm" id="student-sub1">โรงเรียนท่าตะโกพิทยาคม</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card delay-4">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="relative">
+              <img
+                src="./images/photo/ณัฐมน ถนอมเงิน.jpg"
+                alt="นางสาวณัฐมน ถนอมเงิน" class="team-image w-full h-80 bg-gray-200">
+              <div class="role-badge absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-medium">
+                <i class="fas fa-user-graduate mr-1"></i><span id="student2">นักเรียน</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-800 mb-2" id="student-name2">นางสาวณัฐมน ถนอมเงิน</h4>
+              <p class="text-gray-600 mb-1" id="student-des2">นักเรียนชั้นมัธยมศึกษาปีที่ 6</p>
+              <p class="text-gray-500 text-sm" id="student-sub2">โรงเรียนท่าตะโกพิทยาคม</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card delay-3">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="relative">
+              <img
+                src="./images/photo/อัญชิสา แตงพรม.jpg"
+                alt="นางสาวอัญชิสา แตงพรม" class="team-image w-full h-80 bg-gray-200">
+              <div class="role-badge absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-medium">
+                <i class="fas fa-user-graduate mr-1"></i><span id="student3">นักเรียน</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-800 mb-2" id="student-name3">นางสาวอัญชิสา แตงพรม</h4>
+              <p class="text-gray-600 mb-1" id="student-des3">นักเรียนชั้นมัธยมศึกษาปีที่ 6</p>
+              <p class="text-gray-500 text-sm" id="student-sub3">โรงเรียนท่าตะโกพิทยาคม</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-card delay-3">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="relative">
+              <img
+                src="./images/photo/สุริยะ อินชู.jpg"
+                alt="นายสุริยะ อินชู" class="team-image w-full h-80 bg-gray-200">
+              <div class="role-badge-dev absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-medium">
+                <i class="fas fa-user-graduate mr-1"></i><span id="dev">ผู้พัฒนาเว็บไซต์</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-800 mb-2" id="dev-name">นายสุริยะ อินชู</h4>
+              <p class="text-gray-600 mb-1" id="dev-des">นักเรียนชั้นมัธยมศึกษาปีที่ 5</p>
+              <p class="text-gray-500 text-sm" id="dev-sub">โรงเรียนท่าตะโกพิทยาคม</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

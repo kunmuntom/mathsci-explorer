@@ -124,3 +124,27 @@
 .overlay {
   transition: opacity 0.3s ease-in-out;
 }
+
+.team-card {
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.team-image {
+  transition: all 0.3s ease;
+  object-fit: cover;
+  aspect-ratio: 2/3;
+}
+
+.role-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  animation: pulse 2s infinite;
+}
+
+.role-badge-teacher {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.role-badge-dev {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}

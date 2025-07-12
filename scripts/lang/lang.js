@@ -44,7 +44,37 @@ window.translations = {
         aboutTitle: 'คณะผู้จัดทำ',
         aboutDesc: 'สร้างโดยทีมพัฒนา MathSci Explorer',
         schoolName: 'โรงเรียนท่าตะโกพิทยาคม',
-        groupName: 'กลุ่มสาระการเรียนรู้คณิตศาสตร์'
+        groupName: 'กลุ่มสาระการเรียนรู้คณิตศาสตร์',
+        teacher1: 'อาจารย์',
+        teacher2: 'อาจารย์',
+        student1: 'นักเรียน',
+        student2: 'นักเรียน',
+        student3: 'นักเรียน',
+        dev: 'ผู้พัฒนาเว็บไซต์',
+
+        'teacher-name1': 'นายกฤษณินทร์ สังข์ทอง',
+        'teacher-des1': 'อาจารย์ประจำกลุ่มสาระคณิตศาสตร์',
+        'teacher-sub1': 'โรงเรียนท่าตะโกพิทยาคม',
+
+        'teacher-name2': 'นายชวนันท์ สังข์ทอง',
+        'teacher-des2': 'อาจารย์ประจำกลุ่มสาระคณิตศาสตร์',
+        'teacher-sub2': 'โรงเรียนท่าตะโกพิทยาคม',
+
+        'student-name1': 'นางสาวพัทธนันท์ แพงวงศ์',
+        'student-des1': 'นักเรียนชั้นมัธยมศึกษาปีที่ 6',
+        'student-sub1': 'โรงเรียนท่าตะโกพิทยาคม',
+
+        'student-name2': 'นางสาวณัฐมน ถนอมเงิน',
+        'student-des2': 'นักเรียนชั้นมัธยมศึกษาปีที่ 6',
+        'student-sub2': 'โรงเรียนท่าตะโกพิทยาคม',
+
+        'student-name3': 'นางสาวอัญชิสา แตงพรม',
+        'student-des3': 'นักเรียนชั้นมัธยมศึกษาปีที่ 6',
+        'student-sub3': 'โรงเรียนท่าตะโกพิทยาคม',
+
+        'dev-name': 'นายสุริยะ อินชู',
+        'dev-des': 'นักเรียนชั้นมัธยมศึกษาปีที่ 5',
+        'dev-sub': 'โรงเรียนท่าตะโกพิทยาคม'
     },
     en: {
         // Navigation
@@ -90,7 +120,37 @@ window.translations = {
         // About Section
         aboutTitle: 'Development Team',
         aboutDesc: 'Created by MathSci Explorer Development Team',
-        schoolName: 'ThaTako Pittayakhom School',
-        groupName: 'Mathematics Learning Group'
+        schoolName: 'Thatakophittayakom School',
+        groupName: 'Mathematics Learning Group',
+        teacher1: 'Teacher',
+        teacher2: 'Teacher',
+        student1: 'Student',
+        student2: 'Student',
+        student3: 'Student',
+        dev: 'Developer',
+
+        'teacher-name1': 'Mr. Kritsinth Sangkthong',
+        'teacher-des1': 'Mathematics Group Teacher',
+        'teacher-sub1': 'Thatakophittayakom School',
+
+        'teacher-name2': 'Mr. Chawanat Sangkthong',
+        'teacher-des2': 'Mathematics Group Teacher',
+        'teacher-sub2': 'Thatakophittayakom School',
+
+        'student-name1': 'Ms. Patthanun Paengwong',
+        'student-des1': 'Grade 10 Student',
+        'student-sub1': 'Thatakophittayakom School',
+
+        'student-name2': 'Ms. Natthamon Thanomngern',
+        'student-des2': 'Grade 10 Student',
+        'student-sub2': 'Thatakophittayakom School',
+
+        'student-name3': 'Ms. Anchisa Taengphrom',
+        'student-des3': 'Grade 10 Student',
+        'student-sub3': 'Thatakophittayakom School',
+
+        'dev-name': 'Mr. Suriyah Inchoo',
+        'dev-des': 'Grade 11 Student',
+        'dev-sub': 'Thatakophittayakom School'
     }
 }
